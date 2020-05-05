@@ -62,4 +62,5 @@ public class MenuItem {
     private void setNewItem(boolean aNewItem) {
         newItem = aNewItem;
     }
+
 }

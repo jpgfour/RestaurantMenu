@@ -32,4 +32,24 @@ public class Menu {
     public void setDateLastUpdated(Date aDateLastUpdated) {
         this.dateLastUpdated = aDateLastUpdated;
     }
+
+    //add remove item
+    public void addItem(MenuItem menuItem) {
+        //screen out equal items
+        this.menuItems.add(menuItem);
+    }
+
+    public void removeItem(MenuItem menuItem) {
+        //screen out equal items
+        if (this.menuItems.contains(menuItem)) {
+//            int j = this.menuItems.indexOf(menuItem);
+//            this.menuItems.remove(j);
+            this.menuItems.remove(menuItem);
+        }
+    }
+
+    //is menu item new?
+    public boolean isMenuItemNew(MenuItem menuItem){
+        return menuItem.getNewItem();
+    }
 }
