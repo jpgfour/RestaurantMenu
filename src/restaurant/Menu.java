@@ -6,13 +6,13 @@ import java.util.Date;
 public class Menu {
 
     private ArrayList<MenuItem> menuItems;
-    private Date dateLastUpdated;
+    private String dateLastUpdated;
 
     //constructors
     public Menu(ArrayList<MenuItem> menuItems) {
         this.menuItems = menuItems;
     }
-    public Menu(ArrayList<MenuItem> menuItems, Date dateLastUpdated) {
+    public Menu(ArrayList<MenuItem> menuItems, String dateLastUpdated) {
         this.menuItems = menuItems;
         this.dateLastUpdated = dateLastUpdated;
     }
@@ -26,10 +26,10 @@ public class Menu {
     }
 
     //dateLastUpdate getter & setter
-    public Date getDateLastUpdated() {
+    public String getDateLastUpdated() {
         return dateLastUpdated;
     }
-    public void setDateLastUpdated(Date aDateLastUpdated) {
+    public void setDateLastUpdated(String aDateLastUpdated) {
         this.dateLastUpdated = aDateLastUpdated;
     }
 
@@ -52,4 +52,16 @@ public class Menu {
     public boolean isMenuItemNew(MenuItem menuItem){
         return menuItem.getNewItem();
     }
+
+    //menu last updated...use getter
+
+
+    //print menu
+    public void printMenu() {
+        for (MenuItem item : this.menuItems) {
+            System.out.println(item);
+        }
+    }
+
+
 }
